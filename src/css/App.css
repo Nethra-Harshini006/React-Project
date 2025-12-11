@@ -1,0 +1,105 @@
+/* Navbar box at top */
+.app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ffd6e0 0%, #ffc1d4 100%); /* pink-ish boxed look */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  z-index: 999;
+  border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+/* inner container to center content and add padding */
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* brand / logo */
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* horizontal list */
+.nav-list {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* each item */
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 8px;
+}
+
+/* dropdown label style */
+.dropdown-label {
+  user-select: none;
+}
+
+/* dropdown content box (hidden by default) */
+.dropdown-box {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 260px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.06);
+  z-index: 1000;
+}
+
+/* reveal on hover (desktop) */
+.dropdown:hover .dropdown-box,
+.dropdown:focus-within .dropdown-box {
+  display: block;
+}
+
+/* rows inside dropdown */
+.dropdown-row {
+  padding: 8px 6px;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+.dropdown-row:last-child {
+  border-bottom: none;
+}
+
+/* smaller grouping (like Nethra / Contact) */
+.dropdown-row.small {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #333;
+}
+
+/* responsive: collapse spacing on smaller screens */
+@media (max-width: 700px) {
+  .navbar-container {
+    padding: 10px;
+  }
+  .nav-list {
+    gap: 12px;
+    font-size: 14px;
+  }
+  .dropdown-box {
+    left: auto;
+    right: 0;
+    min-width: 200px;
+  }
+}
