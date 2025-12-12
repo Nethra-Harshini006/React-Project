@@ -16,6 +16,7 @@ const LearningReact = () => {
                         img="public/vite.svg"
                     />
                 </li>
+                <li><UseState /></li>
             </ol>
 
             <hr />
