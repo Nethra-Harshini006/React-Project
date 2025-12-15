@@ -1,36 +1,43 @@
-import "../../css/App.css"
-import Props from "./Props.jsx";
-import State from "./State.jsx";
-import Home from "./Home.jsx";
-import About from "./About.jsx";
-import LearningReact from "./LearningReact.jsx";
-import Contact from "./Contact.jsx";
+import "../../css/App.css";
 import { Link } from "react-router-dom";
 
-
-function Navbar(props){
-    return(
+function Navbar() {
+    return (
         <>
-            <nav style={{backgroundColor:"Pink",color:"Black"}}>
-                <ul >
-                    <Link to="/"> <li><Home /></li></Link>
-                    <Link to="/about"> <li>About /</li></Link>
-                    <Link to="/learn-react"> <li>Learning React /</li></Link>
-                    <Link to="/contact"> <li>Contact /</li></Link>
-                    <ol>
-                        <li><Props hi="Welcome to Props" grade="12th" age="17" img="public/vite.svg"/></li>
-                        <ul>
-                             <li>Nethra</li>
-                             <li>Contact</li>
-                        </ul>
-                        <li><State /></li>
-                    </ol>
-                    
-                </ul>
+            <nav style={{ backgroundColor: "pink", padding: "10px" }}>
+                <ul style={{ display: "flex", gap: "20px", listStyle: "none" }}>
 
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/learn-react">Learning React</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+
+                    {/* AUTH LINKS */}
+                    <li>
+                        <Link to="/login">Login</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/signup">Signup</Link>
+                    </li>
+
+                </ul>
             </nav>
-            <p>The above content is Navbar </p>
+
+            <p>The above content is Navbar</p>
         </>
     );
 }
+
 export default Navbar;

@@ -4,6 +4,7 @@ import UseEffectExample from "./Hooks/UseEffect";
 import UseEffectAPI from "./Hooks/UseEffectAPI";
 import UseRef from "./Hooks/UseRef";
 import UseMemo from "./Hooks/UseMemo";
+import UseCallback from "./Hooks/UseCallback";
 
 const LearningReact = () => {
   return (
@@ -27,10 +28,11 @@ const LearningReact = () => {
           <h1>Hooks</h1>
           <ul>
             <li><UseStateExample /></li>
-            <li><UseEffectExample/></li>
-            <li><UseEffectAPI/></li>
-            <li><UseRef /></li>
-            <li><UseMemo /></li>
+            <li><UseEffectExample/></li><hr/>
+            <li><UseEffectAPI/></li><hr/>
+            <li><UseRef /></li><hr/>
+            <li><UseMemo /></li><hr/>
+            <li><UseCallback /></li>
           </ul>
          
         </li>
